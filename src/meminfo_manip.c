@@ -1,5 +1,6 @@
 #include "meminfo_manip.h"
 #include <stdio.h>
+#include <string.h>
 
 int meminfo_read(mem_info_t *info) {
     FILE *f = fopen("/proc/meminfo", "r");
