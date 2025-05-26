@@ -36,6 +36,28 @@ Monitor de recursos en tiempo real: CPU y memoria usando `/proc` y una interfaz 
 └── README.md         
 ```
 ---
+## Modulos
+
+- cpuinfo_manip: lectura de /proc/cpuinfo y /proc/stat, estructura cpu_info_t, funciones cpuinfo_init(), cpuinfo_update_usage(), cpuinfo_free().
+
+- meminfo_manip: lectura de /proc/meminfo, estructura mem_info_t, función meminfo_read().
+
+- tui: interfaz de texto con ncurses, funciones tui_init(), tui_render(), tui_getch(), tui_teardown().
+
+- resource_mon.c: programa principal que integra todos los módulos y el loop de actualización cada segundo.
+
+---
+## Makefile
+
+- all: compila monitor y tests
+
+- resource_mon: compila sólo el monitor
+
+- tests: compila los tests
+
+- clean: limpia obj/ y bin/
+
+---
 
 ## Cómo compilar y ejecutar
 
